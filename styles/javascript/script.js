@@ -42,7 +42,8 @@ const faqs = [
     { question: "current project", answer: "I'm currently working on a project that involves integrating AI features into a personal assistant chatbot." },
     { question: "challenges", answer: "One of my biggest challenges is keeping up with the fast pace of tech advancements, but I enjoy the learning process." },
     { question: "strengths", answer: "My strengths include a strong work ethic, attention to detail, and a passion for continuous learning." },
-    { question: "future plans", answer: "I plan to specialize further in full-stack development and explore new areas like machine learning and AI." }
+    { question: "future plans", answer: "I plan to specialize further in full-stack development and explore new areas like machine learning and AI." },
+    { question: "hey", answer: "Hi there how can I help you today?" }
 ];
 
 // Generate response based on user input

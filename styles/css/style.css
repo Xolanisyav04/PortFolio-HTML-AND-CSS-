@@ -68,6 +68,7 @@ p {
     border-radius: 50px;
     font-weight: bold;
     transition: background-color 0.3s ease;
+    margin-bottom: 10%;
 }
 
 .btn:hover {
