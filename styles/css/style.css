@@ -518,6 +518,7 @@ footer a:hover {
     background:#575753;
     border-radius: 50%;
     transition: all 0.2s ease;
+    z-index: 9999;
 }
 .show-chatbot .chatbot-toggler{
     transform: rotate(90deg);
@@ -536,7 +537,8 @@ footer a:hover {
     position: fixed;
     right: 40px;
     bottom: 100px;
-    width:420px;
+    width: auto;
+    height: auto;
     transform:scale(0.5);
     opacity: 0;
     pointer-events: none;
@@ -547,6 +549,7 @@ footer a:hover {
     box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0.1),
     0 32px 64px -48px rgba(0, 0, 0, 0.5);
     transition: all 0.1s ease;
+    z-index: 9999;
 
 
 }
@@ -555,6 +558,7 @@ footer a:hover {
     transform:scale(1);
     opacity: 1;
     pointer-events: auto;
+    
 }
 .chatbot header{
     background:#f5a623;
@@ -578,7 +582,8 @@ footer a:hover {
 }
 
 .chatbot .chatbox{
-    height: 510px;
+    height: 350px;
+    width: 300px;
     overflow-y: auto;
     padding: 30px 20x 100px;
     margin-bottom: 70px;
