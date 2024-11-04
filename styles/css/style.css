@@ -22,6 +22,17 @@ body {
     height: 100vh;
 }
 
+.contact-container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
 .profile-section {
     width: 40%;
     margin-left: 5%;
