@@ -7,7 +7,9 @@ Welcome to my personal portfolio! This website showcases my projects and skills 
 - **HTML**
 - **CSS**
 
-## How to Run the Project
+## How to Run the Project:
+
+click: https://xolanisyav04.github.io/PortFolio-HTML-AND-CSS-/
 
 To view the portfolio on your local machine:
 
