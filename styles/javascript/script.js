@@ -82,3 +82,89 @@ chatbotToggler.addEventListener("click", () => document.body.classList.toggle("s
 
 // Handle chat on send button click
 sendChatBtn.addEventListener("click", handleChat);
+
+// Typing effect
+const phrases = ["Web Developer", "Problem Solver", "Tech Enthusiast", "Creative Coder"];
+let i = 0, j = 0, currentPhrase = [], isDeleting = false;
+const typedText = document.querySelector(".typed-text");
+
+function typeLoop() {
+    typedText.innerHTML = currentPhrase.join("");
+
+    if (i < phrases.length) {
+        if (!isDeleting && j <= phrases[i].length) {
+            currentPhrase.push(phrases[i][j]);
+            j++;
+        }
+
+        if (isDeleting && j > 0) {
+            currentPhrase.pop();
+            j--;
+        }
+
+        if (j === phrases[i].length) {
+            isDeleting = true;
+        }
+
+        if (j === 0 && isDeleting) {
+            isDeleting = false;
+            i++;
+            if (i === phrases.length) i = 0;
+        }
+    }
+
+    setTimeout(typeLoop, isDeleting ? 50 : 150);
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+    typeLoop();
+    initCanvas();
+});
+
+// Canvas particle effect
+function initCanvas() {
+    const canvas = document.getElementById("hero-bg");
+    const ctx = canvas.getContext("2d");
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+
+    let particles = [];
+    for (let i = 0; i < 100; i++) {
+        particles.push({
+            x: Math.random() * canvas.width,
+            y: Math.random() * canvas.height,
+            r: Math.random() * 2,
+            dx: (Math.random() - 0.5) * 0.5,
+            dy: (Math.random() - 0.5) * 0.5
+        });
+    }
+
+    function draw() {
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        particles.forEach(p => {
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = "rgba(0, 217, 255, 0.5)";
+            ctx.fill();
+        });
+    }
+
+    function update() {
+        particles.forEach(p => {
+            p.x += p.dx;
+            p.y += p.dy;
+
+            if (p.x < 0 || p.x > canvas.width) p.dx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.dy *= -1;
+        });
+    }
+
+    function animate() {
+        draw();
+        update();
+        requestAnimationFrame(animate);
+    }
+
+    animate();
+}
+

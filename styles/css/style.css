@@ -19,7 +19,8 @@ body {
     padding: 50px;
     max-width: 100%;
     margin: 0 auto;
-    height: 100vh;
+    height: 80vh;
+    margin-left: -5%;
 }
 
 .contact-container {
@@ -42,6 +43,7 @@ body {
     width: auto;
     height: auto;
     border-radius: 10px;
+    margin-bottom: 120px;
 }
 
 .info-section {
@@ -151,6 +153,46 @@ p {
     text-align: center;       /* Center text within the .about container */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.aboutme-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh; 
+    width: 100%;
+    /* background-color: #f5f5f5; */
+    padding: 20px;
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+
+.aboutme-text {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.2rem;
+    width: 60%;
+    white-space: pre-line;
+    color: #97d621;
+    border-right: 2px solid #333;
+    padding: 20px;
+    line-height: 1.6;
+    overflow: hidden;
+    animation: blinkCursor 0.8s steps(1) infinite;
+}
+
+/* Optional: Typing cursor blink */
+@keyframes blinkCursor {
+    0% { border-color: transparent; }
+    50% { border-color: #333; }
+    100% { border-color: transparent; }
+}
+
+/* .aboutme{
+    display: flex;         
+    justify-content: center;  
+    height:100%; 
+    width: 50%;
+    margin-left: 25%;
+} */
 
 
 /* Card container */
@@ -683,4 +725,85 @@ footer a:hover {
         display: block;
     }
 }
+
+/* HEADER STYLES */
+.hero-header {
+    position: relative;
+    height: 20vh;
+    color: #fff;
+    text-align: center;
+    overflow: hidden;
+    background: #202020; /* fallback */
+    /* background: linear-gradient(to right, #2c5364, #203a43, #0f2027); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 800px;
+    margin: auto;
+}
+
+.hero-content h1 {
+    font-size: 3em;
+    margin-bottom: 0.3em;
+}
+
+.hero-content h2 {
+    font-size: 2em;
+    height: 50px;
+    color: #00d9ff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.hero-content .highlight {
+    color: #fff;
+}
+
+.hero-content p {
+    font-size: 1.2em;
+    margin-top: 1em;
+    line-height: 1.6;
+}
+
+.hero-btn {
+    display: inline-block;
+    margin-top: 1.5em;
+    padding: 12px 24px;
+    font-size: 1em;
+    border: 2px solid #00d9ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+/* Cursor effect */
+.cursor {
+    display: inline-block;
+    background-color: #00d9ff;
+    width: 2px;
+    margin-left: 5px;
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 50% { opacity: 1; }
+    51%, 100% { opacity: 0; }
+}
+
+/* Canvas background */
+#hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
 

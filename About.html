@@ -19,6 +19,9 @@
     </div>
     
 </div>
+<div class="aboutme-container">
+    <div class="aboutme-text" id="aboutme"></div>
+</div>
 
 
 <div class="card-container">
@@ -235,7 +238,43 @@
 <footer>
     <p>Copyright © 2024. All Rights Reserved <br>Email: <a href="mailto:xolanisyav04@gmail.com">xolanisyav04@gmail.com</a>. <br> </p>
 </footer>
+<script>
+    const lines = [
+        "Hi, I’m Xolani Vilakazi, a passionate and solutions-driven Software Developer from South Africa.",
+        "I proudly call myself the Tech Doctor — if you've got tech problems, I'm your go-to for digital diagnoses and clean, efficient cures.",
+        "I specialize in building practical, user-focused software systems that solve real-world problems with precision and creativity.",
+        "",
+        "My experience spans full-stack development: ASP.NET (Razor Pages), Java, React, JavaScript, HTML, and CSS.",
+        "Projects include: Project Management System for Hulumendhe Group, Bank Account System, and a To-Do List Web App.",
+        "",
+        "I value teamwork, patience, and growth — helping teammates through Git hurdles and delivering under pressure.",
+        "My drive earned me a spot at the Top Students’ Showcase at the University of Johannesburg, October 2024.",
+        "",
+        "I love turning big ideas into digital reality. Whether it’s fixing bugs or building new systems —",
+        "I’m always ready to code solutions that work and wow."
+    ];
+
+    const typingElement = document.getElementById("aboutme");
+    let lineIndex = 0;
+    let charIndex = 0;
+    let currentLine = "";
+
+    function typeLine() {
+        if (lineIndex < lines.length) {
+            currentLine = lines[lineIndex];
+            if (charIndex <= currentLine.length) {
+                typingElement.innerHTML = lines.slice(0, lineIndex).join("\n") + "\n" + currentLine.substring(0, charIndex);
+                charIndex++;
+                setTimeout(typeLine, 30); // typing speed
+            } else {
+                charIndex = 0;
+                lineIndex++;
+                setTimeout(typeLine, 300); // pause before next line
+            }
+        }
+    }
+
+    typeLine();
+</script>
 </body>
-
-
 </html>
