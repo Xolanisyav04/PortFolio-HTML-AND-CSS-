@@ -19,10 +19,13 @@
     </div>
     
 </div>
+<div class="aboutme-container">
+    <div class="aboutme-text" id="aboutme"></div>
+</div>
 
 
 <div class="card-container">
-    <div class="info-section">
+    <!-- <div class="info-section">
         <h2>Personal Information</h2>
         <div class="info-item">
             <span class="label">First Name:</span>
@@ -34,7 +37,7 @@
         </div>
         <div class="info-item">
             <span class="label">Age:</span>
-            <span class="value">23</span>
+            <span class="value"> 27/ Dec/ 2001</span>
         </div>
         <div class="info-item">
             <span class="label">Address:</span>
@@ -48,7 +51,37 @@
             <span class="label">Email:</span>
             <span class="value">xolanisyav04@gmail.com</span>
         </div>
+    </div> -->
+
+    <div class="info-section" style="background: #555; padding: 30px; border-radius: 15px; box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1); width: 100%; max-width: 500px; margin: 20px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+        <h2 style="text-align: center; color: #333; margin-bottom: 20px; font-size: 28px;">Personal Information</h2>
+    
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+            <span style="color: #e0e0e0;"><i class="fas fa-user"></i> First Name:</span>
+            <span style="color:#fdb833;">Xolani</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+            <span style="color: #e0e0e0;"><i class="fas fa-user-tag"></i> Last Name:</span>
+            <span style="color: #fdb833;">Vilakazi</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+            <span style="color: #e0e0e0;"><i class="fas fa-birthday-cake"></i> Age:</span>
+            <span style="color: #fdb833;">27 / Dec / 2001</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+            <span style="color: #e0e0e0;"><i class="fas fa-map-marker-alt"></i> Address:</span>
+            <span style="color: #fdb833;">1 Leyds Street, Braamfontein</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0; border-bottom: 1px solid #e0e0e0;">
+            <span style="color: #e0e0e0;"><i class="fas fa-phone"></i> Phone:</span>
+            <span style="color: #fdb833;">0607511277</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; align-items: center; padding: 12px 0;">
+            <span style="color: #e0e0e0;"><i class="fas fa-envelope"></i> Email:</span>
+            <span style="color: #fdb833;">xolanisyav04@gmail.com</span>
+        </div>
     </div>
+    
     
     <div class="card">
         <div class="card-header">
@@ -70,7 +103,7 @@
            <h1>1+ years</h1>
         </div>
         <div class="card-footer">
-           <!--<a href="timeline-section">Learn More</a>  --> 
+            <a href="#bottom">Learn More</a>
         </div>
     </div>
 </div>
@@ -166,7 +199,7 @@
 
 
 
-
+<div id="bottom"></div>
 <section class="timeline-section">
     <div class="container about-section">
         <div class="about">
@@ -233,9 +266,60 @@
 
 
 <footer>
-    <p>I am Xolani Vilakazi, a Software Developer. You can reach me at <a href="mailto:xolanisyav04@gmail.com">xolanisyav04@gmail.com</a>. <br> </p>
+    <p>Copyright © 2024. All Rights Reserved <br>Email: <a href="mailto:xolanisyav04@gmail.com">xolanisyav04@gmail.com</a>. <br> </p>
 </footer>
+<script>
+    const lines = [
+        "Hi, I’m Xolani Vilakazi, a passionate and solutions-driven Software Developer from South Africa.",
+        "I proudly call myself the Tech Doctor — if you've got tech problems, I'm your go-to for digital diagnoses and clean, efficient cures.",
+        "I specialize in building practical, user-focused software systems that solve real-world problems with precision and creativity.",
+        "",
+        "My experience spans full-stack development: ASP.NET (Razor Pages), Java, React, JavaScript, HTML, and CSS.",
+        "Projects include: Project Management System for Hulumendhe Group, Bank Account System, and a To-Do List Web App.",
+        "",
+        "I value teamwork, patience, and growth — helping teammates through Git hurdles and delivering under pressure.",
+        "My drive earned me a spot at the Top Students’ Showcase at the University of Johannesburg, October 2024.",
+        "",
+        "I love turning big ideas into digital reality. Whether it’s fixing bugs or building new systems —",
+        "I’m always ready to code solutions that work and wow."
+    ];
+
+    const typingElement = document.getElementById("aboutme");
+    let lineIndex = 0;
+    let charIndex = 0;
+    let currentLine = "";
+
+    function typeLine() {
+        if (lineIndex < lines.length) {
+            currentLine = lines[lineIndex];
+            if (charIndex <= currentLine.length) {
+                typingElement.innerHTML = lines.slice(0, lineIndex).join("\n") + "\n" + currentLine.substring(0, charIndex);
+                if (autoScrollEnabled) {
+                    typingElement.parentElement.scrollTop = typingElement.parentElement.scrollHeight;
+                }
+
+                charIndex++;
+                
+                setTimeout(typeLine, 100); // typing speed
+            } else {
+                charIndex = 0;
+                lineIndex++;
+                setTimeout(typeLine, 300); // pause before next line
+            }
+        }
+    }
+    let autoScrollEnabled = true;
+
+    typingElement.parentElement.addEventListener("scroll", () => {
+        const container = typingElement.parentElement;
+        const isAtBottom = container.scrollHeight - container.scrollTop === container.clientHeight;
+
+        autoScrollEnabled = isAtBottom;
+    });
+    typeLine();
+
+
+
+</script>
 </body>
-
-
 </html>
