@@ -158,25 +158,30 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh; 
+    height: 200px; 
     width: 100%;
     /* background-color: #f5f5f5; */
     padding: 20px;
     box-sizing: border-box;
     overflow-y: auto;
+    white-space: pre-wrap;
 }
 
 .aboutme-text {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     font-size: 1.2rem;
     width: 60%;
     white-space: pre-line;
-    color: #97d621;
+    /* color: #97d621; */
     border-right: 2px solid #333;
     padding: 20px;
     line-height: 1.6;
     overflow: hidden;
     animation: blinkCursor 0.8s steps(1) infinite;
+    /* fixing font  */
+    /* font-size: 2em; */
+    color: #00d9ff;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 /* Optional: Typing cursor blink */
@@ -202,6 +207,7 @@ p {
     gap: 20px;
     flex-wrap: wrap;
     padding: 20px;
+
 }
 
 /* Individual card */
@@ -211,7 +217,9 @@ p {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     width: 300px;
+    height: 200px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 100px;
 }
 
 .card:hover {

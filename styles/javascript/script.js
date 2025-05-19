@@ -34,6 +34,7 @@ const faqs = [
     { question: "location", answer: "I'm currently based in South Africa." },
     { question: "portfolio", answer: "My portfolio showcases my work in web development, including interactive designs and real-world projects." },
     { question: "hobbies", answer: "Outside of coding, I enjoy playing football, exploring new technologies, and listening to music." },
+    { question: "hobby", answer: "Outside of coding, I enjoy playing football, exploring new technologies, and listening to music." },
     { question: "goals", answer: "My career goal is to become a senior developer and contribute to impactful projects that make a difference." },
     { question: "design philosophy", answer: "I believe in clean, user-friendly, and functional designs that focus on the end-user experience." },
     { question: "tools", answer: "I use Visual Studio Code, Git, GitHub, and various browser developer tools for my work." },
@@ -42,9 +43,12 @@ const faqs = [
     { question: "current project", answer: "I'm currently working on a project that involves integrating AI features into a personal assistant chatbot." },
     { question: "challenges", answer: "One of my biggest challenges is keeping up with the fast pace of tech advancements, but I enjoy the learning process." },
     { question: "strengths", answer: "My strengths include a strong work ethic, attention to detail, and a passion for continuous learning." },
+    { question: "strength", answer: "My strengths include a strong work ethic, attention to detail, and a passion for continuous learning." },
     { question: "future plans", answer: "I plan to specialize further in full-stack development and explore new areas like machine learning and AI." },
     { question: "hey", answer: "Hi there how can I help you today?" },
     { question: "hello", answer: "Hi there how can I help you today?" },
+    { question: "xolani", answer: "Hello that's me :)" },
+    { question: "vilakazi", answer: "Hello that's my surname :)" },
     { question: "hi", answer: "Hi there how can I help you today?" }
 ];
 
