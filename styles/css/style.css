@@ -463,6 +463,7 @@ h1 span {
     justify-content: space-around;
     flex-wrap: wrap;
     padding: 20px;
+    margin-bottom: 10%;
 }
 .project {
     background-color: #333;
