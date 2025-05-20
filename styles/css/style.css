@@ -19,7 +19,7 @@ body {
     padding: 50px;
     max-width: 100%;
     margin: 0 auto;
-    height: 80vh;
+    height: 50%;
     margin-left: -5%;
 }
 
@@ -52,6 +52,7 @@ body {
 
 .info-section .home {
     margin-right: 10%;
+    height: auto;
 }
 h1 {
     font-size: 50px;
@@ -180,7 +181,7 @@ p {
     animation: blinkCursor 0.8s steps(1) infinite;
     /* fixing font  */
     /* font-size: 2em; */
-    color: #00d9ff;
+    color: #f5a623;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -320,6 +321,7 @@ p {
     padding: 50px;
     max-width: 1200px;
     margin: auto;
+    margin-bottom: 10%;
 }
 
 
@@ -395,7 +397,7 @@ p {
     margin-left: 120px;
 }
 .motive-details{
-    margin-right: 10;
+    margin-right: 10%;
 }
 .contact-section h2 {
     font-size: 36px;
@@ -547,10 +549,11 @@ footer {
     color: #f1f1f1;
     text-align: center;
     padding: 20px 0;
-    position: relative;
+    position: fixed;
     bottom: 0;
     width: 100%;
     font-size: 1rem;
+    
 }
 
 footer a {
@@ -737,7 +740,7 @@ footer a:hover {
 /* HEADER STYLES */
 .hero-header {
     position: relative;
-    height: 20vh;
+    height: 20%;
     color: #fff;
     text-align: center;
     overflow: hidden;
@@ -762,7 +765,7 @@ footer a:hover {
 
 .hero-content h2 {
     font-size: 2em;
-    height: 50px;
+    height: 20%;
     color: #00d9ff;
     font-family: 'Courier New', Courier, monospace;
 }
